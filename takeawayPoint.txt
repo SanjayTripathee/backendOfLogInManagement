@@ -1,0 +1,28 @@
+credential not match means => your old password spelling is mistake now your new password is old if you want to make new password
+
+
+//forget password
+  process:
+  forget password
+     pass email from postman
+     get email
+     check if our email exist in DB(if not throw error)
+     send email with link(frontend link + with token)
+     send respond
+  reset password
+      pass token from postman
+      past password from postman
+      pass through isAutthenticated
+      get id
+      then hash password
+      update that idsend response
+
+->we put token inside link so, that we could expire that link
+
+->Authenticated means it check token valid or not
+
+->Authorized means what thing should who can perform
+      admin=>user read
+      superAdmin=>user read,super admin can delete user
+      customer=>doesnot have permission to read user
+ status code of authrowized is 403
